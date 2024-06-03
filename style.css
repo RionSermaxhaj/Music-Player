@@ -232,7 +232,7 @@ header .master_play img {
 }
 header .master_play h5 {
     width: 130px;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     margin-left: 15px;
     color: #fff;
     line-height: 17px;
@@ -248,6 +248,19 @@ header .master_play h5 .subtitle {
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space:    nowrap ;
+    white-space:  nowrap ;
+}
+header .master_play .icon {
+    font-size: 20px;
+    color: #fff;
+    margin: 0px 20px 0px 40px;
+    outline: none;
+    display: flex;
+    align-items: center;
+  
 }
 
+header .master_play .icon .bi {
+    cursor: pointer;
+    outline: none;
+}
