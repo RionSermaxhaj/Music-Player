@@ -175,7 +175,7 @@ header .master_play{
 header .master_play .wave {
     width: 30px;
     height: 30px;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     padding-bottom: 5px;
     display: flex;
     align-items: flex-end;
@@ -187,7 +187,7 @@ header .master_play .wave .wave1 {
     background: #36e2ec;
     margin-right: 3px;
     border-radius: 10px 10px 0px 0px;
-    animation: wave .5s linear infinite;
+    animation: unset;
 
 }
 header .master_play .wave .wave1:nth-child(2) {
@@ -202,8 +202,15 @@ header .master_play .wave .wave1:nth-child(3) {
 
 /*javascript classes */
 
+header .master_play .active1 .wave1 {
+  animation: wave .5s linear infinite; 
+}
+
+header .master_play .active1 .wave1:nth-child(2) {
+    animation-delay: .4s;
+}
 header .master_play .active1 .wave1:nth-child(3) {
-    height: 8px;
+    
     animation-delay: .8s;   
 }
 
@@ -218,3 +225,29 @@ header .master_play .active1 .wave1:nth-child(3) {
          height: 10px;
     }
 }
+
+header .master_play img {
+    width: 35px;
+    height: 35px;
+}
+header .master_play h5 {
+    width: 130px;
+    border: 1px solid #fff;
+    margin-left: 15px;
+    color: #fff;
+    line-height: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap ;
+    font-size: 13px;
+   
+}
+header .master_play h5 .subtitle {
+    font-size: 11px;
+    color: #4c5262;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:    nowrap ;
+}
+
