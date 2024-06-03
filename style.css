@@ -264,3 +264,63 @@ header .master_play .icon .bi {
     cursor: pointer;
     outline: none;
 }
+
+header .master_play .icon .shuffle {
+font-size: 17.5px;
+margin-right: 10px;
+overflow: hidden;
+display: flex;
+align-items: center;
+}
+header .master_play .icon #download_music {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+header .master_play .icon .bi:nth-child(3) {
+   border: 1px solid rbg(105, 105, 105, .1);
+   border-radius: 50%;
+   padding: 1px 5px 0px 7px;
+   margin: 0px 5px;
+}
+header .master_play span{
+  color: #fff;
+  width: 32px;
+  /* border: 1px solid #fff; */
+  font-size: 11px;
+  font-weight: 400;
+}
+
+header .master_play #currentStart {
+   margin: 0px 0px 0px 20px;
+}
+
+header .master_play .bar{
+ position: relative;
+ width: 43%;
+ height: 2px;
+ background: rgb(105,105, 170, .1);
+ margin: 0px 15px 0px 10px;
+}
+
+header .master_play .bar .bar2{
+    position: absolute;
+    background: #36e3ec;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    transition: 1s linear ;
+}
+
+header .master_play .bar .dot{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #36e2ec;
+    border-radius: 50%;
+    left: 0%;
+    top: -1.5px;
+    transition: 1s linear;
+}
+
+
