@@ -82,44 +82,44 @@ const songs = [
     },
     {
         id: 14,
-        songName: `East side <br />
-                <div class="subtitle">Benny Blanco </div>`,
+        songName: `Stay <br />
+                <div class="subtitle">Rihanna </div>`,
                 poster: "img/14.jpg"
     },
     {
         id: 15,
-        songName: `East side <br />
-                <div class="subtitle">Benny Blanco </div>`,
+        songName: `Scared to be lonley <br />
+                <div class="subtitle">Dua Lipa </div>`,
                 poster: "img/15.jpg"
     },
     {
         id: 16,
-        songName: `East side <br />
-                <div class="subtitle">Benny Blanco </div>`,
+        songName: `Mockingbird <br />
+                <div class="subtitle">Eminem</div>`,
                 poster: "img/16.jpg"
     },
     {
         id: 17,
-        songName: `East side <br />
-                <div class="subtitle">Benny Blanco </div>`,
+        songName: `Listen <br />
+                <div class="subtitle">Beyonce </div>`,
                 poster: "img/17.jpg"
     },
     {
         id: 18,
-        songName: `East side <br />
-                <div class="subtitle">Benny Blanco </div>`,
+        songName: `One Dance <br />
+                <div class="subtitle">Drake </div>`,
                 poster: "img/18.jpg"
     },
     {
         id: 19,
-        songName: `East side <br />
-                <div class="subtitle">Benny Blanco </div>`,
+        songName: `Yosemite <br />
+                <div class="subtitle">Travis Scott </div>`,
                 poster: "img/19.jpg"
     },
     {
         id: 20,
-        songName: `East side <br />
-                <div class="subtitle">Benny Blanco </div>`,
+        songName: `No Role Modelz <br />
+                <div class="subtitle">J Cole</div>`,
                 poster: "img/20.jpg"
     },
 
