@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Player</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.8/browser/pixi.min.js"></script>
-</head>
-<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tiny5&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: 'Bebas Neue', serif;
+        font-size: 40px;
+      }
+      #back-link {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
     <div id="pixi-container"></div>
-    <button id="play-logo">Play</button> <!-- Add this button -->
+    <a href="index.html" id="back-link">Go back</a>
+    <button type="button" class="btn btn-light" id="play-pause">Pause</button>
 
     <script>
       // Initialize PixiJS
       const app = new PIXI.Application({
         width: window.innerWidth,
         height: window.innerHeight,
-        transparent: true
+        transparent: true,
       });
-      document.getElementById('pixi-container').appendChild(app.view);
+      document.getElementById("pixi-container").appendChild(app.view);
 
       // Load the video
-      const videoTexture = PIXI.Texture.from('audio/BB Poqi - Kthehu (Me tekst).mp4');
+      const videoTexture = PIXI.Texture.from("audio/What is Spotify.mp4");
       const videoSprite = new PIXI.Sprite(videoTexture);
 
       videoSprite.width = window.innerWidth;
@@ -32,18 +54,32 @@
 
       app.stage.addChild(videoSprite);
 
-      // Play video after user interaction
-      document.getElementById('play-logo').addEventListener('click', () => {
-        videoTexture.baseTexture.resource.source.play();
+      // Toggle play/pause when the button is clicked
+      const playPauseButton = document.getElementById("play-pause");
+      let isPlaying = false;
+
+      playPauseButton.addEventListener("click", () => {
+        if (isPlaying) {
+          videoTexture.baseTexture.resource.source.pause(); // Pause the video
+          playPauseButton.textContent = "Play"; // Change button text to 'Play'
+        } else {
+          videoTexture.baseTexture.resource.source.play(); // Play the video
+          playPauseButton.textContent = "Pause"; // Change button text to 'Pause'
+        }
+        isPlaying = !isPlaying; // Toggle the playing state
       });
 
       // Update the size when the window resizes
-      window.addEventListener('resize', () => {
+      window.addEventListener("resize", () => {
         app.renderer.resize(window.innerWidth, window.innerHeight);
         videoSprite.width = window.innerWidth;
         videoSprite.height = window.innerHeight;
         videoSprite.position.set(app.screen.width / 2, app.screen.height / 2);
       });
     </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
 </body>
 </html>

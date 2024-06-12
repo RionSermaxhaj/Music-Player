@@ -5,10 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        cursor: none; /* Hide default cursor */
+      }
+      #pixi-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
 
   <body>
@@ -98,8 +115,7 @@
         <nav>
           <ul>
             <li>Discover <span></span></li>
-            <li>MY LIBRARY</li>
-            <a href="/Music-Player/videoB.html"><li>RADIO</li></a>
+            <a href="/Music-Player/videoB.html"><li>About Us</li></a>
           </ul>
 
           <div class="search">
@@ -110,9 +126,7 @@
             <img src="img/1.jpg" alt="" />
           </div>
         </nav>
-        <div class="content">
-        
-        </div>
+        <div class="content"></div>
 
         <div class="popular_song">
           <div class="h4">
@@ -344,9 +358,10 @@
       </div>
     </header>
 
+    <div id="pixi-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.10/pixi.min.js"></script>
+
     <script src="app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.1.3/pixi.min.js"></script>
- 
-    
   </body>
 </html>
